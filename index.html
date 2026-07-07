@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anaplan Project Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Anaplan Project Hub</h1>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: Quick Links -->
+    <aside class="panel links-panel">
+      <h2>Quick Links</h2>
+      <nav id="links-list" class="links-list"></nav>
+    </aside>
+
+    <div class="divider"></div>
+
+    <!-- MIDDLE: Model Details -->
+    <section class="panel model-panel">
+      <h2>Model Details</h2>
+      <select id="model-select" class="model-dropdown">
+        <option value="" disabled selected>Select a Model…</option>
+      </select>
+
+      <div id="model-details" class="model-card">
+        <div class="detail-row">
+          <span class="detail-label">Workspace Id:</span>
+          <span id="workspace-id" class="detail-value">—</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Model Id:</span>
+          <span id="model-id" class="detail-value">—</span>
+        </div>
+        <button id="copy-model" class="copy-btn card-copy-btn" title="Copy both IDs" hidden>Copy</button>
+      </div>
+    </section>
+
+    <!-- RIGHT: AD Groups -->
+    <section class="panel adgroups-panel">
+      <h2>AD Groups</h2>
+      <ul id="adgroups-list" class="adgroups-list"></ul>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

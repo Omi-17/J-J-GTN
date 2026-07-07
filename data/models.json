@@ -1,0 +1,17 @@
+[
+  {
+    "name": "DEV - Financial Planning",
+    "workspaceId": "8a80aXXXXXXXXXXXXXXXXXXXXXXXXX001",
+    "modelId": "F1XXXXXXXXXXXXXXXXXXXXXXXXXXXXA01"
+  },
+  {
+    "name": "TEST - Financial Planning",
+    "workspaceId": "8a80aXXXXXXXXXXXXXXXXXXXXXXXXX002",
+    "modelId": "F1XXXXXXXXXXXXXXXXXXXXXXXXXXXXA02"
+  },
+  {
+    "name": "PROD - Financial Planning",
+    "workspaceId": "8a80aXXXXXXXXXXXXXXXXXXXXXXXXX003",
+    "modelId": "F1XXXXXXXXXXXXXXXXXXXXXXXXXXXXA03"
+  }
+]
