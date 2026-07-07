@@ -36,15 +36,20 @@ async function copyText(text, buttonEl) {
   }
   showToast("Copied to clipboard");
   if (buttonEl) {
-    const original = buttonEl.textContent;
-    buttonEl.textContent = "Copied!";
+    buttonEl.innerHTML = ICON_CHECK;
     buttonEl.classList.add("copied");
     setTimeout(() => {
-      buttonEl.textContent = original;
+      buttonEl.innerHTML = ICON_COPY;
       buttonEl.classList.remove("copied");
     }, 1200);
   }
 }
+
+// SVG icons (inline so there are no external dependencies)
+const ICON_COPY =
+  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+const ICON_CHECK =
+  '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 
 let toastTimer;
 function showToast(msg) {
@@ -143,6 +148,7 @@ async function renderModels() {
       const md = m.modelId || "—";
       wsEl.textContent = ws;
       modelEl.textContent = md;
+      copyBtn.innerHTML = ICON_COPY;
       copyBtn.hidden = false;
       copyBtn.onclick = () =>
         copyText(`Workspace Id: ${ws}\nModel Id: ${md}`, copyBtn);
@@ -187,9 +193,10 @@ async function renderADGroups() {
       span.textContent = name;
 
       const btn = document.createElement("button");
-      btn.className = "copy-btn";
-      btn.textContent = "Copy";
+      btn.className = "copy-btn icon-btn";
+      btn.innerHTML = ICON_COPY;
       btn.title = "Copy AD group";
+      btn.setAttribute("aria-label", "Copy AD group");
       btn.onclick = () => copyText(name, btn);
 
       li.appendChild(span);

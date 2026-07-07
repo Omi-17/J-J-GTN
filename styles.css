@@ -130,21 +130,25 @@ body {
 .adgroups-list li:hover { background: #f0f7f2; }
 .adgroups-list .group-name { word-break: break-all; }
 
-/* ---------- Copy buttons ---------- */
+/* ---------- Copy buttons (icon) ---------- */
 .copy-btn {
-  border: 1px solid var(--green);
-  background: var(--panel-bg);
-  color: var(--green-dark);
-  font-size: 12px;
-  padding: 3px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
   border-radius: 6px;
   cursor: pointer;
-  white-space: nowrap;
   opacity: 0;
-  transition: opacity 0.12s ease, background 0.12s ease;
+  transition: opacity 0.12s ease, background 0.12s ease, color 0.12s ease;
 }
-.copy-btn:hover { background: var(--green); color: #fff; }
-.copy-btn.copied { background: var(--green); color: #fff; opacity: 1; }
+.copy-btn:hover { background: rgba(14, 124, 58, 0.12); color: var(--green-dark); }
+.copy-btn.copied { color: var(--green); opacity: 1; }
+.copy-btn svg { display: block; }
 
 /* Show copy button on hover of its container */
 .model-card:hover .copy-btn,
