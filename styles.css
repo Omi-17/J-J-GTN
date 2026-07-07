@@ -62,7 +62,7 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 220px 1px 1fr 320px;
+  grid-template-columns: 200px 1px 340px minmax(440px, 1fr);
   gap: 24px;
   padding: 28px;
   align-items: start;
@@ -183,7 +183,7 @@ body {
   transition: background 0.12s ease;
 }
 .adgroups-list li:hover { background: rgba(255, 40, 0, 0.10); }
-.adgroups-list .group-name { word-break: break-all; }
+.adgroups-list .group-name { white-space: nowrap; }
 
 /* ---------- Copy buttons (icon) ---------- */
 .copy-btn {
