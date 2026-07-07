@@ -62,7 +62,7 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 200px 1px 340px minmax(440px, 1fr);
+  grid-template-columns: 200px 1px 440px minmax(440px, 1fr);
   gap: 24px;
   padding: 28px;
   align-items: start;
