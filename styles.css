@@ -211,6 +211,16 @@ body {
 .model-card:hover .copy-btn,
 .adgroups-list li:hover .copy-btn { opacity: 1; }
 
+/* AD Groups header with "copy all" icon */
+.adgroups-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.adgroups-header .copy-btn { width: 28px; height: 28px; }
+.adgroups-panel:hover .adgroups-header .copy-btn { opacity: 1; }
+
 /* ---------- Empty / error states ---------- */
 .state-msg {
   margin: 4px 0;

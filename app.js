@@ -169,13 +169,24 @@ async function renderModels() {
 // ---------------------------------------------------------------------------
 async function renderADGroups() {
   const list = document.getElementById("adgroups-list");
+  const copyAllBtn = document.getElementById("copy-all-groups");
   list.innerHTML = "";
+  copyAllBtn.hidden = true;
+  copyAllBtn.onclick = null;
+  copyAllBtn.innerHTML = ICON_COPY;
   try {
     const groups = await loadJSON("data/adgroups.json");
     // Accept either ["NAME", ...] or [{ "name": "NAME" }, ...]
     const names = groups
       .map((g) => (typeof g === "string" ? g : g && g.name))
       .filter((n) => typeof n === "string" && n.trim() !== "");
+
+    if (names.length > 0) {
+      copyAllBtn.hidden = false;
+      copyAllBtn.title = `Copy all ${names.length} AD groups`;
+      copyAllBtn.setAttribute("aria-label", `Copy all ${names.length} AD groups`);
+      copyAllBtn.onclick = () => copyText(names.join("\n"), copyAllBtn);
+    }
 
     if (names.length === 0) {
       const li = document.createElement("li");
