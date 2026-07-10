@@ -10,5 +10,17 @@
   {
     "label": "Adobe Acrobat Sign",
     "url": "https://secure.na4.adobesign.com/account/requestSignatures?groupId=CBJCHBCAABAA9nOqcP56mRkJkNO3LcLaVstIt2wPEIJV"
+  },
+   {
+    "label": "AWS",
+    "url": "https://cloudx.jnj.com/itx-edj/login/?role=true"
+  },
+   {
+    "label": "MBOX",
+    "url": "https://mboxnaprd.jnj.com/WebInterface/login.html"
+  },
+   {
+    "label": "IICS",
+    "url": "https://dm-us.informaticacloud.com/ma/sso/2QUC5KSdvAHjD6OhjT3xcW"
   }
 ]
