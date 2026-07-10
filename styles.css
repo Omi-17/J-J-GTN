@@ -62,10 +62,12 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 200px 1px 480px 560px 1fr;
-  gap: 24px;
-  padding: 28px;
+  grid-template-columns: 190px 1px 450px 470px;
+  gap: 20px;
+  padding: 24px;
   align-items: start;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .panel {
@@ -157,7 +159,7 @@ body {
   border-radius: 3px;
   background: linear-gradient(180deg, var(--red-bright), var(--red-dark));
 }
-.detail-row { margin-bottom: 12px; font-size: 15px; white-space: nowrap; }
+.detail-row { margin-bottom: 12px; font-size: 14px; white-space: nowrap; }
 .detail-label { font-weight: 600; color: var(--muted); margin-right: 6px; }
 .detail-value { font-family: "Consolas", "Courier New", monospace; color: var(--red-bright); }
 
@@ -176,7 +178,7 @@ body {
   justify-content: space-between;
   gap: 8px;
   padding: 9px 10px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Consolas", "Courier New", monospace;
   border-bottom: 1px solid var(--border);
   border-radius: 6px;
