@@ -62,7 +62,7 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 200px 1px 440px minmax(440px, 1fr);
+  grid-template-columns: 200px 1px 480px 560px 1fr;
   gap: 24px;
   padding: 28px;
   align-items: start;
@@ -157,7 +157,7 @@ body {
   border-radius: 3px;
   background: linear-gradient(180deg, var(--red-bright), var(--red-dark));
 }
-.detail-row { margin-bottom: 12px; font-size: 15px; word-break: break-all; }
+.detail-row { margin-bottom: 12px; font-size: 15px; white-space: nowrap; }
 .detail-label { font-weight: 600; color: var(--muted); margin-right: 6px; }
 .detail-value { font-family: "Consolas", "Courier New", monospace; color: var(--red-bright); }
 
